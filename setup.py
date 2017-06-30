@@ -16,11 +16,11 @@ setup(
 	description = "This script checks the state of resources and nodes.",
 	license = "GPLv3",
 	keywords = "monitoring check apparmor activity",
-	url = "https://git.gendarmerie.fr/stig",
+	url = "https://github.com/mgrzybek/monitoring-plugins-apparmor",
 	packages = ['monitoring_plugins_apparmor'],
 	data_files = [('/usr/lib/nagios/plugins',['bin/check_aa_profile', 'bin/check_aa_status'])],
 	install_requires = ['pynagios', 'sudo'],
-	long_description = read('README'),
+	long_description = read('README.md'),
 	classifiers = [
 		"Development Status :: 5 - Production/Stable",
 		"Topic :: Utilities",
