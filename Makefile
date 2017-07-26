@@ -6,8 +6,12 @@ build: doc
 
 clean:
 	rm -rf build
+	rm -rf deb_dist
 	rm -rf dist
 	rm -rf *.egg-info
+
+sdist: doc
+	python setup.py sdist
 
 # Documentation is written using Markdown (Github-compatible) 
 # then translated into RST to be pypi-compatible
