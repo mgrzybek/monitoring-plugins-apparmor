@@ -10,21 +10,21 @@ def read(fname):
 
 setup(
 	name = "monitoring-plugins-apparmor",
-	version = "1.0",
+	version = "1.0.1",
 	author = "Mathieu Grzybek",
 	author_email = "mathieu@grzybek.fr",
-	description = "This script checks the state of resources and nodes.",
+	description = "This script checks the state AppArmor status and profiles.",
 	license = "GPLv3",
 	keywords = "monitoring check apparmor activity",
 	url = "https://github.com/mgrzybek/monitoring-plugins-apparmor",
 	packages = ['monitoring_plugins_apparmor'],
 	data_files = [('/usr/lib/nagios/plugins',['bin/check_aa_profile', 'bin/check_aa_status'])],
 	install_requires = ['pynagios', 'sudo'],
-	long_description = read('README.md'),
+	long_description = read('README.rst'),
 	classifiers = [
 		"Development Status :: 5 - Production/Stable",
 		"Topic :: Utilities",
 		"Environment :: Console",
-		"License :: OSI Approved :: GPLv3 License"
-	],
+		"License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"
+	]
 )
