@@ -17,6 +17,7 @@ setup(
 	license = "GPLv3",
 	keywords = "monitoring check apparmor activity",
 	url = "https://github.com/mgrzybek/monitoring-plugins-apparmor",
+	download_url = "https://github.com/mgrzybek/monitoring-plugins-apparmor/archive/1.0.1.tar.gz",
 	packages = ['monitoring_plugins_apparmor'],
 	data_files = [('/usr/lib/nagios/plugins',['bin/check_aa_profile', 'bin/check_aa_status'])],
 	install_requires = ['pynagios', 'sudo'],
