@@ -9,15 +9,16 @@ import os
 # Is apparmor enabled ?
 class StatusCheck(Plugin):
 	status_result = 0
+	status_command = [ '/usr/sbin/aa-status', '--enabled' ]
 
 	def doApiGet(self):
-		status_command = [ 'sudo', '/usr/sbin/aa-status', '--enabled' ]
+		if os.getuid() != 0:
+			status_command.insert(0, 'sudo')
+
 		self.status_result = subprocess.call(status_command)
 
 	def check(self):
 		try:
-#			if os.getuid() != 0:
-#				return Response(UNKNOWN, "Must be run as root")
 
 			self.doApiGet()
 			return self.parseResult()
